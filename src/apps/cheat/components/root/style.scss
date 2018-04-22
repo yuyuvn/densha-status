@@ -1,0 +1,62 @@
+.cheating-panel {
+  .handle-bm {
+    bottom: -5px !important;
+    left: 20px !important;
+    width: calc(100% - 30px) !important;
+    z-index: 1;
+    opacity: 0;
+  }
+  .handle-bl {
+    bottom: -5px !important;
+    left: -5px !important;
+    z-index: 1;
+    width: 20px !important;
+    height: 20px !important;
+    opacity: 0;
+  }
+  .handle-ml {
+    left: -5px !important;
+    z-index: 1;
+    height: calc(100% - 30px) !important;
+    top: 20px !important;
+    opacity: 0;
+  }
+  .handle-br {
+    bottom: -5px !important;
+    right: -5px !important;
+    z-index: 1;
+    width: 20px !important;
+    height: 20px !important;
+    opacity: 0;
+  }
+  .handle-mr {
+    top: 20px !important;
+    height: calc(100% - 30px) !important;
+    z-index: 1;
+    right: -5px !important;
+    opacity: 0;
+  }
+  .handle-tr {
+    top: -5px !important;
+    right: -5px !important;
+    z-index: 1;
+    width: 20px !important;
+    height: 20px !important;
+    opacity: 0;
+  }
+  .handle-tl {
+    top: -5px !important;
+    left: -5px !important;
+    z-index: 1;
+    width: 20px !important;
+    height: 20px !important;
+    opacity: 0;
+  }
+  .handle-tm {
+    top: -5px !important;
+    left: 20px !important;
+    width: calc(100% - 30px) !important;
+    z-index: 1;
+    opacity: 0;
+  }
+}

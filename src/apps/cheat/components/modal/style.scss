@@ -1,0 +1,11 @@
+.cheating-modal {
+  height: 100%;
+
+  .modal-content {
+    height: 100%;
+
+    .modal-body {
+      overflow-y: scroll;
+    }
+  }
+}

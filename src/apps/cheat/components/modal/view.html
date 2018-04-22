@@ -1,0 +1,18 @@
+<vue-draggable-resizable :w="width" :h="height" v-on:dragging="onDrag" v-on:resizing="onResize" :active="true" drag-handle=".modal-header" :minw="300" :minh="200" :x="x" :y="y" :z="10000">
+  <div class="cheating-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cheating panel</h5>
+        <button type="button" class="close" v-on:click="hideModal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <FormComponent></FormComponent>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" v-on:click="hideModal">Close</button>
+      </div>
+    </div>
+  </div>
+</vue-draggable-resizable>

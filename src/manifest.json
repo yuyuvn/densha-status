@@ -1,0 +1,8 @@
+{
+  "name": "Train information",
+  "short_name": "Train status",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#01aa8f"
+}

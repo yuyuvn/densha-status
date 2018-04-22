@@ -1,0 +1,16 @@
+<div class="mobile">
+  <svg viewBox="0 0 500 1000" width="100%">
+    <use xlink:href="#train-line-vertical" x="0" y="0"></use>
+    <use xlink:href="#mizonokuchi" width="160" height="80" x="0" y="0"></use>
+    <use xlink:href="#takasu" width="160" height="80" x="0" y="100"></use>
+    <use xlink:href="#futako-shinchi" width="160" height="80" x="0" y="200"></use>
+    <use xlink:href="#futako-tamagawa" width="160" height="80" x="0" y="300"></use>
+    <use xlink:href="#yoga" width="160" height="80" x="0" y="400"></use>
+    <use xlink:href="#sakurashinmachi" width="160" height="80" x="0" y="500"></use>
+    <use xlink:href="#komazawa-daigaku" width="160" height="80" x="0" y="600"></use>
+    <use xlink:href="#sangenyaya" width="160" height="80" x="0" y="700"></use>
+    <use xlink:href="#ikejiri-oohashi" width="160" height="80" x="0" y="800"></use>
+    <use xlink:href="#shibuya" width="160" height="80" x="0" y="900"></use>
+    <TrainComponent v-for="train in trains" v-bind:key="train.operationNumber" v-bind:train="train" orientation="vertical"></TrainComponent>
+  </svg>
+</div>

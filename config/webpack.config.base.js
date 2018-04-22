@@ -43,7 +43,15 @@ let config = {
     new CopyWebpackPlugin([{
       from: 'src/assets',
       to: './assets'
-    } ])
+    }]),
+    new CopyWebpackPlugin([{
+      from: 'src/sw.js',
+      to: './sw.js'
+    }]),
+    new CopyWebpackPlugin([{
+      from: 'src/manifest.json',
+      to: './manifest.json'
+    }])
   ]
 }
 

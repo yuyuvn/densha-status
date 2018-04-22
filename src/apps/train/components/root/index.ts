@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import { mapGetters } from 'vuex'
-import temperatureComponent from '../temperature'
-import weatherComponent from '../weather'
+import DesktopComponent from '../desktop'
+import MobileComponent from '../mobile'
 
 import './style.scss'
 
 @Component({
   template: require('./view.html'),
   components: {
-    temperatureComponent,
-    weatherComponent
+    DesktopComponent,
+    MobileComponent
   }
 })
 export default class RootComponent extends Vue {
@@ -21,10 +21,10 @@ export default class RootComponent extends Vue {
   }
 
   beforeMount () {
-    this.$store.dispatch('Weather/loadData')
+    this.$store.dispatch('Train/loadData')
     this.interval = setInterval(() => {
-      this.$store.dispatch('Weather/loadData')
-    }, 3600000)
+      this.$store.dispatch('Train/loadData')
+    }, 5000)
   }
 
   beforeDestroy () {
