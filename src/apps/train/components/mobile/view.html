@@ -11,6 +11,6 @@
     <use xlink:href="#sangenyaya" width="160" height="80" x="0" y="700"></use>
     <use xlink:href="#ikejiri-oohashi" width="160" height="80" x="0" y="800"></use>
     <use xlink:href="#shibuya" width="160" height="80" x="0" y="900"></use>
-    <TrainComponent v-for="train in trains" v-bind:key="train.operationNumber" v-bind:train="train" orientation="vertical"></TrainComponent>
+    <TrainComponent v-for="train in trains" v-bind:key="`${train.operationNumber}-${train.operationSerialNumber}`" v-bind:train="train" orientation="vertical"></TrainComponent>
   </svg>
 </div>

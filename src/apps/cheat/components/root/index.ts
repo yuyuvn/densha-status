@@ -20,7 +20,7 @@ export default class RootComponent extends Vue {
   }
 
   mounted () {
-    this.$store.dispatch('Cheat/loadData')
+    // this.$store.dispatch('Cheat/loadData')
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js').then((registration) => {

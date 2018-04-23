@@ -6,7 +6,6 @@ export const actions: ActionTree<RequestState, RootState> = {
   loadData ({ commit, state }) {
     return DbApi.getData().then((requests) => {
       commit('setRequests', { requests })
-      return Promise.resolve(requests)
     })
   },
 

@@ -9,7 +9,7 @@ export default {
       const trains = response.data.trains.map((train) => {
         return {
           operationNumber: train.operation_number,
-          operationSerialNumber: train.operation_number,
+          operationSerialNumber: train.operation_serial_number,
           kind: train.kind,
           trainKind: train.train_kind,
           delayTime: train.delay_time,
