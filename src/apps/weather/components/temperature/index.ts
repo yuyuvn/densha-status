@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
-import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 
 import './style.scss'
 
@@ -8,7 +8,7 @@ import './style.scss'
   template: require('./view.html'),
   components: {
   },
-  computed: { ...mapGetters('Weather', ['temparature']) }
+  computed: { ...mapState('Weather', ['temparature']) }
 })
 export default class TemperatureComponent extends Vue {
   temparature: number

@@ -30,6 +30,7 @@
     "bootstrap-vue": "~2.0.0-rc.1",
     "dexie": "^2.0.2",
     "gsap": "^1.20.4",
+    "serviceworker-webpack-plugin": "^0.2.3",
     "vue": "~2.5.13",
     "vue-class-component": "~6.1.2",
     "vue-draggable-resizable": "^1.7.1",

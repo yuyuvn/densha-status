@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
-import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 
 @Component({
   template: require('./view.html'),
-  computed: { ...mapGetters('Weather', ['weatherStatus']) }
+  computed: { ...mapState('Weather', ['weatherStatus']) }
 })
 export default class WeatherComponent extends Vue {
   weatherStatus: string

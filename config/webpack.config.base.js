@@ -1,6 +1,7 @@
 const helpers = require('./helpers')
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin')
 
 let config = {
   entry: {
@@ -44,14 +45,9 @@ let config = {
       from: 'src/assets',
       to: './assets'
     }]),
-    new CopyWebpackPlugin([{
-      from: 'src/sw.js',
-      to: './sw.js'
-    }]),
-    new CopyWebpackPlugin([{
-      from: 'src/manifest.json',
-      to: './manifest.json'
-    }])
+    new ServiceWorkerWebpackPlugin({
+      entry: helpers.root('/src/sw.ts'),
+    }),
   ]
 }
 

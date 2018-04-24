@@ -1,15 +1,13 @@
 import { Request } from '../types'
 import Dexie from 'dexie'
 
-const version = 10
-
 class MockedRequestDatabase extends Dexie {
   requests: Dexie.Table<Request,number>
 
   constructor () {
     super('MockedRequestDatabase')
-    this.version(version).stores({
-      requests: 'id, [endpoint+type]'
+    this.version(1).stores({
+      requests: '[endpoint+type]'
     })
   }
 }

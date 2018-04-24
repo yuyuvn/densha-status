@@ -16,6 +16,10 @@ export const mutations: MutationTree<RequestState> = {
     state.selectedRequest = state.requests.find((request) => request.type === payload.type && request.endpoint === payload.endpoint)
   },
 
+  updateBody (state, payload: { body: string }) {
+    state.selectedRequest.body = payload.body
+  },
+
   updateRequest (state, payload: { inject: boolean }) {
     state.selectedRequest.inject = payload.inject
   },

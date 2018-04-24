@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
-import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 import ModalComponent from '../modal'
+import runtime from 'serviceworker-webpack-plugin/lib/runtime'
 
 import './style.scss'
 
@@ -10,7 +11,7 @@ import './style.scss'
   components: {
     ModalComponent
   },
-  computed: { ...mapGetters('Cheat', ['showModal']) }
+  computed: { ...mapState('Cheat', ['showModal']) }
 })
 export default class RootComponent extends Vue {
   showModal: boolean
@@ -20,15 +21,9 @@ export default class RootComponent extends Vue {
   }
 
   mounted () {
-    // this.$store.dispatch('Cheat/loadData')
+    this.$store.dispatch('Cheat/loadData')
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then((registration) => {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope)
-        }, (err) => {
-          console.log('ServiceWorker registration failed: ', err)
-        })
-      })
+      runtime.register()
     }
   }
 

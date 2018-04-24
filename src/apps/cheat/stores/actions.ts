@@ -13,6 +13,10 @@ export const actions: ActionTree<RequestState, RootState> = {
     commit('selectRequest', payload)
   },
 
+  updateBody ({ commit, state }, payload) {
+    commit('updateBody', payload)
+  },
+
   hideModal ({ commit, state }) {
     commit('hideModal')
   },

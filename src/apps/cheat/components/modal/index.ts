@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import { Component, Prop, Provide } from 'vue-property-decorator'
-import { mapGetters } from 'vuex'
 import FormComponent from '../form'
 
 import './style.scss'
