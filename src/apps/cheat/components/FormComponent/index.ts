@@ -7,8 +7,6 @@ import './style.scss'
 
 @Component({
   template: require('./view.html'),
-  components: {
-  },
   computed: { ...mapState('Cheat', ['requests', 'selectedRequest']) }
 })
 export default class FormComponent extends Vue {
@@ -28,22 +26,5 @@ export default class FormComponent extends Vue {
     const type = text.splice(0, 1)[0]
     const endpoint = text.join(' ')
     this.$store.dispatch('Cheat/selectRequest', { type, endpoint })
-  }
-
-  public inject () {
-    this.$store.dispatch('Cheat/mockRequest')
-  }
-
-  public unmock () {
-    this.$store.dispatch('Cheat/stopMockRequest')
-  }
-
-  public get body (): string {
-    if (!this.selectedRequest) return ''
-    return this.selectedRequest.body
-  }
-
-  public set body (body: string) {
-    this.$store.dispatch('Cheat/updateBody', { body })
   }
 }

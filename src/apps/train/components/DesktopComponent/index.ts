@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import { mapGetters } from 'vuex'
 import { Train } from '../../types'
-import TrainComponent from '../train'
+import TrainComponent from '../TrainComponent'
 
 @Component({
   template: require('./view.html'),
@@ -11,7 +11,7 @@ import TrainComponent from '../train'
   },
   computed: { ...mapGetters('Train', ['trains']) }
 })
-export default class MobileComponent extends Vue {
+export default class DesktopComponent extends Vue {
   trains: Train[]
 
   constructor () {

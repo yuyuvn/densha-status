@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import { mapGetters } from 'vuex'
-import DesktopComponent from '../desktop'
-import MobileComponent from '../mobile'
+import DesktopComponent from '../DesktopComponent'
+import MobileComponent from '../MobileComponent'
 
 import './style.scss'
 

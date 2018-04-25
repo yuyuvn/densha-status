@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import { mapGetters } from 'vuex'
-import temperatureComponent from '../temperature'
-import weatherComponent from '../weather'
+import TemperatureComponent from '../TemperatureComponent'
+import WeatherComponent from '../WeatherComponent'
 
 import './style.scss'
 
 @Component({
   template: require('./view.html'),
   components: {
-    temperatureComponent,
-    weatherComponent
+    TemperatureComponent,
+    WeatherComponent
   }
 })
 export default class RootComponent extends Vue {

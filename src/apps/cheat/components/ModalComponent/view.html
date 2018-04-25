@@ -9,9 +9,13 @@
       </div>
       <div class="modal-body">
         <FormComponent></FormComponent>
+        <div class="editor">
+          <AceEditorComponent v-if="selectedRequest" v-model="body"></AceEditorComponent>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" v-on:click="hideModal">Close</button>
+        <button v-if="selectedRequest" v-on:click="inject()" class="btn btn-primary">モック</button>
+        <button v-if="selectedRequest" v-on:click="unmock()" class="btn btn-danger">リセット</button>
       </div>
     </div>
   </div>

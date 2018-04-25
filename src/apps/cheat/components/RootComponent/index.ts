@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import { mapState } from 'vuex'
-import ModalComponent from '../modal'
+import ModalComponent from '../ModalComponent'
 import runtime from 'serviceworker-webpack-plugin/lib/runtime'
 
 import './style.scss'

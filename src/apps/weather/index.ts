@@ -1,4 +1,4 @@
-import rootComponent from './components/root'
+import RootComponent from './components/RootComponent'
 import { makeHot, reload } from '../../util/hot-reload'
 import Vue from 'vue'
 import { VueConstructor } from 'vue/types/vue'
@@ -8,7 +8,7 @@ import { WeatherState } from './stores/types'
 export default {
   name: 'Weather',
   elementId: 'weather_info',
-  rootComponent: rootComponent,
+  rootComponent: RootComponent,
   stores: [
     {
       key: ['Weather'],

@@ -1,4 +1,4 @@
-import rootComponent from './components/root'
+import RootComponent from './components/RootComponent'
 import { makeHot, reload } from '../../util/hot-reload'
 import Vue from 'vue'
 import { VueConstructor } from 'vue/types/vue'
@@ -12,7 +12,7 @@ Vue.component('vue-draggable-resizable', VueDraggableResizable)
 export default {
   name: 'Cheat',
   elementId: 'cheating_panel',
-  rootComponent: rootComponent,
+  rootComponent: RootComponent,
   stores: [
     {
       key: ['Cheat'],
